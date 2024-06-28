@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="bg-slate-200 bg-opacity-50 z-10  text-slate-950 p-4  fixed  w-full backdrop-blur-md">
+    <header className="bg-slate-700 bg-opacity-50 z-10  text-slate-500 p-4  fixed  w-full backdrop-blur-md">
       <nav className="flex justify-between items-center">
         <h1 className="text-2xl">Mayank Chandratre</h1>
         <ul className="flex space-x-4">
