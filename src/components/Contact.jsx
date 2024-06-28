@@ -19,7 +19,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('YOUR_GOOGLE_SCRIPT_URL', formData, {
+      const response = await axios.post('https://script.google.com/macros/s/AKfycbzgGQcOR1hSSSHTKJumxESNFZDYHT-jjMU_QWU6C4hjfokbCA0jwLSQAqFbpcREQ48s/exec', formData, {
         headers: {
           'Content-Type': 'application/json'
         }
