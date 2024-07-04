@@ -10,8 +10,8 @@ const Skills = () => {
         <h2 className="text-4xl font-bold mb-12">Skills</h2>
 
         <div className="absolute -rotate-[30deg] -left-10 -top-5 italic text-yellow-500 ">
-          It's a <span className="bg-white bg-opacity-10">DRUM</span>, Make some
-          sound <br /> <div className="animate-bounce">&darr;</div>
+          {/* It's a <span className="bg-white bg-opacity-10">DRUM</span>, Make some
+          sound <br /> <div className="animate-bounce">&darr;</div> */}
         </div>
         <div className="flex flex-col justify-center gap-5">
 
