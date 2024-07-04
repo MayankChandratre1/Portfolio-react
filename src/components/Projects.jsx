@@ -14,7 +14,7 @@ const Projects = () => {
       className="min-h-screen flex  items-center justify-center py-12 bg-gradient-to-b  from-gray-700 to-gray-600"
     >
       <div className="max-w-screen px-12 text-center text-white">
-        <h2 className="text-4xl font-bold mb-5">Projects</h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-5">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
           {/* 
@@ -76,19 +76,19 @@ const ProjectCard = ({image, title, repo, children, tech})=>{
 
   return (
     <div className="bg-gray-100  text-white rounded-xl p-4 shadow-lg flex flex-col  items-center bg-gradient-to-br from-gray-500 to-gray-600  justify-between">
-            <h3 className="text-2xl font-bold my-4">{title}</h3>
-            <p className="mb-2 text-justify">
+            <h3 className="text-lg md:text-2xl font-bold my-4">{title}</h3>
+            <p className="mb-2 text-justify text-sm md:text-md hidden md:block">
             {children}
-            <div className="text-green-400  font-semibold">{tech}</div>
             </p>
+            <div className="text-green-400  font-semibold text-left">{tech}</div>
             <img
-              className="w-[100%] h-52 object-cover object-left-top rounded-xl my-2"
+              className="w-[100%] h-24 md:h-52 object-cover object-left-top rounded-xl my-2"
               src={image}
               alt=""
             />
             <a
               href={repo}
-              className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-xl  block w-full mt-2"
+              className=" text-sm md:text-md text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-xl  block w-full mt-2"
               target="blank"
             >
               View Code &rarr;

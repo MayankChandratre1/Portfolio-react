@@ -7,7 +7,7 @@ const Skills = () => {
       className="min-h-screen flex items-center justify-center bg-gradient-to-t  from-gray-700 to-gray-600"
     >
       <div className="max-w-[70%] text-center text-white relative">
-        <h2 className="text-4xl font-bold mb-12">Skills</h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-12">Skills</h2>
 
         <div className="absolute -rotate-[30deg] -left-10 -top-5 italic text-yellow-500 ">
           {/* It's a <span className="bg-white bg-opacity-10">DRUM</span>, Make some
