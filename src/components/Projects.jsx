@@ -40,31 +40,27 @@ const Projects = () => {
               View Code &rarr;
             </a>
           </div> */}
-
-          <ProjectCard title={"Movie Hub"} image={MovieHubProject} repo={"https://github.com/MayankChandratre1/MovieHub"}>
-          A Project in HTML CSS and Vanilla Js. It uses LocalStorage Api of JS to simulate the authentication to certain point.
-          </ProjectCard>
           
-          <ProjectCard title={"Todo Web App"} image={TodoProject} repo={"https://github.com/MayankChandratre1/05_Todo"}>
+          <ProjectCard title={"Todo Web App"} image={TodoProject} repo={"https://github.com/MayankChandratre1/05_Todo"} tech={"MongoDB, Javascript, EJS, JWT"}>
           I made this Todo list project with CSS, EJS, ExpressJs. You can
               add daily tasks as well as your work tasks and mark them as
               completed once done.
           </ProjectCard>
           
-          <ProjectCard title={"Payments App"} image={PaytmProject} repo={"https://github.com/MayankChandratre1/paytm-cohort"}>
+          <ProjectCard title={"Payments App"} image={PaytmProject} repo={"https://github.com/MayankChandratre1/paytm-cohort"} tech={"React, MongoDB, Express, Tailwind"}>
           It's a MERN stack project with JWT authentication. User can SignUp & LogIn and send simulated money to other signed up users.
               It uses zod for input validation.
           </ProjectCard>
           
-          <ProjectCard title={"Notes App"} image={NotesProject} repo={"https://github.com/MayankChandratre1/04_NotesApp"}>
+          <ProjectCard title={"Notes App"} image={NotesProject} repo={"https://github.com/MayankChandratre1/04_NotesApp"} tech={"EJS, Javascript, MongoDB, JWT"}>
           I made this Notes App project with CSS, EJS, ExpressJs. User can create notes i.e. txt files and perform CRUD operations on it
           </ProjectCard>
           
-          <ProjectCard title={"Weather App"} image={WeatherProject} repo={"https://github.com/MayankChandratre1/02_WeatherApp"}>
+          <ProjectCard title={"Weather App"} image={WeatherProject} repo={"https://github.com/MayankChandratre1/02_WeatherApp"} tech={"Javascript, HTML, CSS, APIs"}>
           Made for practicing the API and Async JS with basic HTML, CSS for frontend. Used OpenWeatherMap API. Icons downloaded from Flaticon site.
           </ProjectCard>
           
-          <ProjectCard title={"Movie Hub"} image={MovieHubProject} repo={"https://github.com/MayankChandratre1/MovieHub"}>
+          <ProjectCard title={"Movie Hub"} image={MovieHubProject} repo={"https://github.com/MayankChandratre1/MovieHub"} tech={"Javascript, HTML, CSS"}>
           A Project in HTML CSS and Vanilla Js. It uses LocalStorage Api of JS to simulate the authentication to certain point.
           </ProjectCard>
           
@@ -76,13 +72,14 @@ const Projects = () => {
 };
 
 
-const ProjectCard = ({image, title, repo, children})=>{
+const ProjectCard = ({image, title, repo, children, tech})=>{
 
   return (
     <div className="bg-gray-100  text-white rounded-xl p-4 shadow-lg flex flex-col  items-center bg-gradient-to-br from-gray-500 to-gray-600  justify-between">
             <h3 className="text-2xl font-bold my-4">{title}</h3>
             <p className="mb-2 text-justify">
             {children}
+            <div className="text-green-400  font-semibold">{tech}</div>
             </p>
             <img
               className="w-[100%] h-52 object-cover object-left-top rounded-xl my-2"

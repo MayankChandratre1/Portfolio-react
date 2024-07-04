@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import ContactCard from './ContactCard';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,8 +36,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center bg-gradient-to-t from-gray-900 via-gray-700 to-gray-600">
-      <div className="max-w-2xl text-center">
+    <section id="contact" className="min-h-screen p-4 flex items-center justify-center bg-gradient-to-t from-gray-900 via-gray-700 to-gray-600">
+      {/* <div className="max-w-2xl text-center">
         <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <input 
@@ -67,7 +68,8 @@ const Contact = () => {
           />
           <button type="submit" className="bg-slate-500 w-52 text-white p-2 rounded">Send</button>
         </form>
-      </div>
+      </div> */}
+      <ContactCard message={"Have something to say? Ping me on"} />
     </section>
   );
 };

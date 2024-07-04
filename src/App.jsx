@@ -5,9 +5,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import './App.css'
 import Contact from './components/Contact';
+import Cursor from './components/Cursor';
 
 function App() {
   return (
+    <>
+    <Cursor />
     <div>
       <Header />
       <main>
@@ -17,6 +20,7 @@ function App() {
         <Contact />
       </main>
     </div>
+    </>
   );
 }
 
