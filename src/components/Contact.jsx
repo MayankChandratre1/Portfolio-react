@@ -19,9 +19,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://script.google.com/macros/s/AKfycbzgGQcOR1hSSSHTKJumxESNFZDYHT-jjMU_QWU6C4hjfokbCA0jwLSQAqFbpcREQ48s/exec', formData, {
+      const response = await axios.post('https://script.google.com/macros/s/AKfycbzMmZIQIWnNpGm_TULabUshHTmqoSrTPd-kwQAMETG9cMkaXAa0iyGdRqnvMj5Si8Y/exec', formData, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin':'http://localhost:5173/'
         }
       });
       console.log(response.data);
