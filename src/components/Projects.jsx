@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import profile from "../assets/Profile.png";
 import MovieHubProject from "../assets/MovieHubProject.png";
-import NetflixProject from "../assets/NetflixProject.png";
 import NotesProject from "../assets/NotesProject.png";
 import PaytmProject from "../assets/PaytmProject.png";
 import TodoProject from "../assets/TodoProject.png";
 import WeatherProject from "../assets/WeatherProject.png";
+import ChatApp from "../assets/ChatApp.png";
 
 const Projects = () => {
   return (
@@ -17,30 +16,12 @@ const Projects = () => {
         <h2 className="text-2xl md:text-4xl font-bold mb-5">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-          {/* 
-
           
-
-         
-
-          <div className="bg-gray-100  text-white rounded-xl p-4 shadow-lg flex flex-col  items-center bg-gradient-to-br from-gray-500 to-gray-600  justify-between">
-            <h3 className="text-2xl font-bold my-4"></h3>
-            <p className="mb-2 text-justify">
-            
-            </p>
-            <img
-              className="w-[100%] h-52 object-cover object-center rounded-xl my-2"
-              src={WeatherProject}
-              alt=""
-            />
-            <a
-              href=""
-              className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-xl  block w-full mt-2"
-            >
-              View Code &rarr;
-            </a>
-          </div> */}
           
+          <ProjectCard title={"The Chat App"} image={ChatApp} repo={"https://github.com/MayankChandratre1/chat-app-2.0"} tech={"NextJs, Websockets, Docker, Turborepo, Github Actions, Azure VM"}>
+          This is a Full Stack + DevOps project. Create an account, put on a profile picture, create chat rooms join members and chat in real time.
+          </ProjectCard>
+
           <ProjectCard title={"Todo Web App"} image={TodoProject} repo={"https://github.com/MayankChandratre1/05_Todo"} tech={"MongoDB, Javascript, EJS, JWT"}>
           I made this Todo list project with CSS, EJS, ExpressJs. You can
               add daily tasks as well as your work tasks and mark them as

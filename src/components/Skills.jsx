@@ -14,31 +14,30 @@ const Skills = () => {
           sound <br /> <div className="animate-bounce">&darr;</div> */}
         </div>
         <div className="flex flex-col justify-center gap-5">
-
-          <SkillSet >
-          <SkillElement label={"MERN Stack"} sound={"snare"}  />
+          
+          <SkillSet skills={['MERN Stack','NextJs']} color="red" sound={"tom-1"} />
+          <SkillSet skills={['Problem Solving','DSA']} color="blue" sound={"tom-2"} />
+          <SkillSet skills={['HTML5','Tailwind','Javascript']} color="red" sound={"tom-4"} />
+          <SkillSet skills={['Java Core','Typescript']} color="blue" sound={"tom-3"} />
+          <SkillSet skills={['Git & Github','Docker','Turborepo','Github Actions']} color="red" sound={"crash"} />
+          {/* 
+          <SkillSet>
+          <SkillElement label={"Java Core"} sound={"tom-3"}  color={'yellow'} />
+          <SkillElement label={"Typescript"} color={'yellow'}  />
           </SkillSet>
 
-          <SkillSet> 
-          <SkillElement label={"Problem Solving"} sound={"tom-1"}  />
-          <SkillElement label={"DSA"} sound={"tom-1"}  />
+          <SkillSet>
+          <SkillElement label={"HTML5 & CSS"} sound={"tom-4"} color={'green'} />
+          <SkillElement label={"Javascript"} color={'green'} />
+          <SkillElement label={"Tailwind"} sound={"tom-2"} color={'green'} />
           </SkillSet>
           
-
           <SkillSet>
-          <SkillElement label={"HTML5 & CSS"} sound={"tom-4"} />
-          <SkillElement label={"Javascript"}  />
-          <SkillElement label={"Tailwind"} sound={"tom-2"}  />
-          </SkillSet>
-
-          <SkillSet>
-          <SkillElement label={"Java Core"} sound={"tom-3"}  />
-          <SkillElement label={"Typescript"}  />
-          </SkillSet>
-
-          <SkillSet>
-          <SkillElement label={"Git & GitHub"} sound={"kick-bass"}  />
-          </SkillSet>
+          <SkillElement label={"Git & GitHub"} sound={"kick-bass"} color={'blue'}  />
+          <SkillElement label={"Docker"} sound={"kick-bass"} color={'blue'} />
+          <SkillElement label={"Turborepo"} sound={"kick-bass"} color={'blue'} />
+          <SkillElement label={"Github Actions"} sound={"kick-bass"} color={'blue'} />
+          </SkillSet> */}
           
           
         </div>
@@ -56,7 +55,7 @@ const SkillElement = ({ label, sound, color }) => {
   };
 
   
-
+  
   return (
     // <div
     //   className={`md:w-52 w-auto p-5  rounded-md shadow-md active:scale-75 transition-all duration-100 ease-in text-xs md:text-lg ${color} border border-${color}`}
@@ -64,20 +63,22 @@ const SkillElement = ({ label, sound, color }) => {
     // >
     //   {label ? label : "Skill"}
     // </div>
-    <div
-      className={`md:w-52 w-auto p-5  rounded-md shadow-md active:scale-75 transition-all duration-100 ease-in text-xs md:text-lg border border-red-500 hover:bg-red-500`}
+    <button
+      className={`md:w-52 w-auto p-5  rounded-md shadow-md active:scale-75 transition-all duration-100 ease-in text-xs md:text-lg hover:animate-bounce hover:my-3 ${color}`}
       onClick={handleClick}
     >
       {label ? label : "Skill"}
-    </div>
+    </button>
   );
 };
 
-const SkillSet = ({ children }) => {
+const SkillSet = ({ children , skills, color, sound }) => {
  
   return (
     <div className={`flex gap-2 justify-center flex-wrap items-center`}>
-      {children}
+      {skills.map(skill => (
+        <SkillElement color={color} label={skill} sound={sound} />
+      ))}
     </div>
   );
 };
