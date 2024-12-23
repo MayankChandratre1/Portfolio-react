@@ -21,7 +21,7 @@ const Cursor = () => {
     }
   },[])
   return (
-    <div className='z-30 w-8 h-8 rounded-full border-4 border-red-500 absolute transition-all duration-0 ease-in pointer-events-none animate-bounce shadow-glow' style={{top:`${positions.y}px`, left:`${positions.x}px`}}>
+    <div className='max-md:hidden z-30 w-8 h-8 rounded-full border-4 border-red-500 absolute transition-all duration-0 ease-in pointer-events-none animate-bounce shadow-glow' style={{top:`${positions.y}px`, left:`${positions.x}px`}}>
 
     </div>
   )
